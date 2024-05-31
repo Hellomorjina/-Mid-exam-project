@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/output.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <div class="flex fixed top-0 left-0 w-full h-full gap-[200px] justify-center z-0">
+        <div class="w-[2px] bg-gray-100 h-full"></div>
+        <div class="w-[2px] bg-gray-100 h-full"></div>
+        <div class="w-[2px] bg-gray-100 h-full"></div>
+        <div class="w-[2px] bg-gray-100 h-full"></div>
+        <div class="w-[2px] bg-gray-100 h-full"></div>
+        <div class="w-[2px] bg-gray-100 h-full"></div>
+        <div class="w-[2px] bg-gray-100 h-full"></div>
+    </div>
+</head>
+
+<body class="z-10 relative">
+
+    <header class="bg-white my-8 relative z-10">
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="logo flex justify-between items-center my-8">
+                    <p class="font-bold font-Schibsted text-2xl px-2"><span
+                            class="font-bold text-[16px] italic font-lora">the</span>Bureau</p>
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        id="svg484779330_329">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 0C5.37258 0 0 5.37258 0 12V20C0 26.6274 5.37258 32 12 32H20C26.6274 32 32 26.6274 32 20V12C32 5.37258 26.6274 0 20 0H12ZM13 6C9.13401 6 6 9.13401 6 13H13V6Z"
+                            fill="black" />
+                    </svg>
+                </div>
+                <div class="md:flex md:items-center md:gap-12">
+                    <nav aria-label="Global" class="hidden md:block">
+                        <ul class="flex items-center gap-6 text-sm">
+                            <li> <a class="head_t" href="#"> About </a> </li>
+                            <li> <a class="head_t" href="#"> Careers </a></li>
+                            <li><a class="head_t" href="#"> History </a> </li>
+                            <li><a class="head_t" href="#"> Services </a> </li>
+                            <li> <a class="head_t" href="#"> Projects </a> </li>
+                            <li><a class="head_t" href="#"> Blog </a> </li>
+                        </ul>
+                    </nav>
+
+                    <div class="flex items-center gap-4">
+                        <div class="sm:flex sm:gap-4">
+                            <a class="rounded-full text-sm text-[16px] font-bold px-5 py-2.5 text-black shadow border-2 border-black hover:bg-black pl-7 duration-500 hover:text-white flex gap-3 items-center  group"
+                                href="#">
+                                Contacts
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-0 group-hover:size-6 duration-500">
+                                    <path fill-rule="evenodd"
+                                        d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM2.25 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM6.31 15.117A6.745 6.745 0 0 1 12 12a6.745 6.745 0 0 1 6.709 7.498.75.75 0 0 1-.372.568A12.696 12.696 0 0 1 12 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 0 1-.372-.568 6.787 6.787 0 0 1 1.019-4.38Z"
+                                        clip-rule="evenodd" />
+                                    <path
+                                        d="M5.082 14.254a8.287 8.287 0 0 0-1.308 5.135 9.687 9.687 0 0 1-1.764-.44l-.115-.04a.563.563 0 0 1-.373-.487l-.01-.121a3.75 3.75 0 0 1 3.57-4.047ZM20.226 19.389a8.287 8.287 0 0 0-1.308-5.135 3.75 3.75 0 0 1 3.57 4.047l-.01.121a.563.563 0 0 1-.373.486l-.115.04c-.567.2-1.156.349-1.764.441Z" />
+                                </svg>
+                            </a>
+
+                            <div class="hidden sm:flex">
+                                <a class="rounded-full text-sm text-[16px] font-bold px-5 py-2.5 text-white shadow border-2 border-black bg-black pl-7 duration-500  flex gap-3 items-center  group"
+                                    href="#">
+                                    Get Template
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="size-0 group-hover:size-6 duration-500">
+                                        <path fill-rule="evenodd"
+                                            d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM2.25 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM6.31 15.117A6.745 6.745 0 0 1 12 12a6.745 6.745 0 0 1 6.709 7.498.75.75 0 0 1-.372.568A12.696 12.696 0 0 1 12 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 0 1-.372-.568 6.787 6.787 0 0 1 1.019-4.38Z"
+                                            clip-rule="evenodd" />
+                                        <path
+                                            d="M5.082 14.254a8.287 8.287 0 0 0-1.308 5.135 9.687 9.687 0 0 1-1.764-.44l-.115-.04a.563.563 0 0 1-.373-.487l-.01-.121a3.75 3.75 0 0 1 3.57-4.047ZM20.226 19.389a8.287 8.287 0 0 0-1.308-5.135 3.75 3.75 0 0 1 3.57 4.047l-.01.121a.563.563 0 0 1-.373.486l-.115.04c-.567.2-1.156.349-1.764.441Z" />
+                                    </svg>
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="block md:hidden">
+                            <button class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--start hero section  -->
+    <section class="hero relative z-10" data-aos="fade-up"data-aos-duration="1500">
+        <div class="w-[1100px] mx-auto my-8">
+            <button class="main_but">★ Palo Alto, CA</button>
+            <h2 class="text-8xl font-bold my-6 ">
+                We <span class="font-lora italic font-normal">are a</span> Strategy <br>
+                <span class="font-lora italic font-normal">&</span>Design Studio
+            </h2>
+            <p class="text-2xl my-3">
+                We are helping companies bring new products and services to market. <br>Smart, collaborative, and fun.
+            </p>
+        </div>
+    </section>
+    <!--End hero section  -->
+    <!--start All social -->
+    <div class="all_maida flex justify-between mx-auto lg:m-auto w-[1100px] py-8 gap-3 relative z-10"data-aos="fade-up"data-aos-duration="1500">
+        <div class="all_social">
+            <svg class="social " xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
+                color="var(--token-04a3f1b0-e024-4c12-967c-3112bcf4a142, rgb(255, 255, 255)) /* {&quot;name&quot;:&quot;Light / White&quot;} */"
+                style="user-select: none; width:32; height:32; display: inline-block; fill: var(--token-04a3f1b0-e024-4c12-967c-3112bcf4a142, rgb(0, 0, 0)); flex-shrink: 0;">
+                <path
+                    d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z" />
+                </svg>
+
+            <svg class="social " xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
+                color="var(--token-04a3f1b0-e024-4c12-967c-3112bcf4a142, rgb(255, 255, 255)) /* {&quot;name&quot;:&quot;Light / White&quot;} */"
+                style="user-select: none; width:32; height:32; display: inline-block; fill: var(--token-04a3f1b0-e024-4c12-967c-3112bcf4a142, rgb(0, 0, 0)); flex-shrink: 0;">
+                <path
+                    d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+                </svg>
+            <svg class="social" xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"
+                color="var(--token-04a3f1b0-e024-4c12-967c-3112bcf4a142, rgb(255, 255, 255)) /* {&quot;name&quot;:&quot;Light / White&quot;} */"
+                style="user-select: none; width:32; height:32; display: inline-block; fill: var(--token-04a3f1b0-e024-4c12-967c-3112bcf4a142, rgb(0, 0, 0)); flex-shrink: 0;">
+                <path
+                    d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
+                </svg>
+        </div>
+        <div class="side_but">
+            <a
+                class="rounded-full  text-[20px] px-5 py-4 font-bold text-black shadow border-2 border-black bg-white pl-7 flex gap-3 items-center hover:bg-black duration-500 hover:text-white  group ">About
+                us
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="size-0  group-hover:size-6 duration-500">
+                    <path fill-rule="evenodd"
+                        d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd" />
+                </svg>
+
+            </a>
+        </div>
+    </div>
+
+    <!--end All social -->
+    <!-- start-scroll-section  -->
+    <section class="scroll_conntaner relative z-10"data-aos="fade-up"data-aos-duration="1500">
+        <div class="show relative z-10 bolock whitespace-nowrap">
+            <div class="show_slider">
+                <img src="https://framerusercontent.com/images/SP5waqWZHe0vWOZk8pfUNrCA.jpg" alt="">
+                <img src="https://framerusercontent.com/images/zWjH1RjKy40mfuMBqWObEZ8GBM.jpg" alt="">
+                <img src="https://framerusercontent.com/images/IMsrkSDmyPvdJfbaRMoYmoxhiEc.jpg" alt="">
+                <img src="https://framerusercontent.com/images/SP5waqWZHe0vWOZk8pfUNrCA.jpg?scale-down-to=512" alt="">
+                <img src="https://framerusercontent.com/images/SP5waqWZHe0vWOZk8pfUNrCA.jpg" alt="">
+                <img src="https://framerusercontent.com/images/zWjH1RjKy40mfuMBqWObEZ8GBM.jpg" alt="">
+                <img src="https://framerusercontent.com/images/IMsrkSDmyPvdJfbaRMoYmoxhiEc.jpg" alt="">
+                <img src="https://framerusercontent.com/images/SP5waqWZHe0vWOZk8pfUNrCA.jpg?scale-down-to=512" alt="">
+            </div>
+        </div>
+
+    </section>
+    <!-- end-scroll-section  -->
+    <!-- start_meida_section -->
+    <section class="relative z-10"data-aos="fade-up">
+            <p class="mx_auto lg:m-auto w-[1100px] py-8 font-lora font-normal text-[24px] ">Our Clients</p>
+        <div class="media flex justify-between mx_auto lg:m-auto w-[1100px] py-8 mb-16">
+
+            <h2 class="font-bold text-[34px] font-serif ">Feacbook</h2>
+            <h2 class="font-bold text-[34px] font-serif ">Google</h2>
+            <h2 class="font-bold text-[34px] font-serif ">logitecs</h2>
+            <h2 class="font-bold text-[34px] font-serif ">linked <span class="bg-black text-white p-1 rounded ">in</span>
+            </h2>
+            <h2 class="font-semibold text-[34px] font-serif ">PHILIPS</h2>
+        </div>
+    </section>
+    <!-- eand_meida_section -->
+    <!-- start_FAQ_section -->
+    <section class="w-[1100px] mx-auto border-t-2 border-black relative z-10">
+        <div class="all_faq_section w-[1000px]">
+            <p class="font-lora italic font-medium text-[24px] pt-[34px] ml-[64px]">Services</p>
+            <h2 class=" font-bold text-[64px] ml-[64px]">What we do</h2>
+            <p class="text-[24px] font-normal pb-10 ml-[64px]">This way, we can cut out all the project management and focus just on the design processes.</p>
+            <div class="ALL_FAQ  w-[1000px] mx-auto ml-[64px]">
+                <div class="FAQ flex justify-between items-center group duration-500 relative transition-all py-[38px]">
+                    <div class="faq_text ">
+                        <h2 class=" font-bold text-[48px]">Art & Culture <span
+                                class=" opacity-0 group-hover:opacity-100 group-hover:translate-y-0 duration-500">→</span>
+                        </h2>
+                        <p
+                            class="text-[24px] font-normal hidden group-hover:block group-hover:translate-y-0 duration-500">
+                            Connecting people through art, stories, food, and culture</p>
+                    </div>
+                    <div class="faq_img">
+                        <img class="w-[100px]  absolute top-0 right-0 z-40 rotate-6 hidden group-hover:block duration-500 group-hover:rotate-12"
+                            src="https://framerusercontent.com/images/c1IDFOlKiZMtWILMJUcX8Sgfw.png" alt="">
+                    </div>
+                </div>
+                <div class="FAQ flex justify-between items-center group duration-500 relative transition-all py-[38px]">
+                    <div class="faq_text">
+                        <h2 class=" font-bold text-[48px]">Consumer Tech <span class=" hidden group-hover:inline-block group-hover:translate-y-0 duration-500">→</span>
+                        </h2>
+                        <p
+                            class="text-[24px] font-normal hidden group-hover:block group-hover:translate-y-0 duration-500">
+                            Connecting people through art, stories, food, and culture</p>
+                    </div>
+                    <div class="faq_img">
+                        <img class="w-[100px]  absolute top-0 right-0 z-40 rotate-6 hidden group-hover:block duration-500 group-hover:rotate-12"
+                            src="https://framerusercontent.com/images/c1IDFOlKiZMtWILMJUcX8Sgfw.png" alt="">
+                    </div>
+                </div>
+                <div class="FAQ flex justify-between items-center group duration-500 relative transition-all py-[38px]">
+                    <div class="faq_text">
+                        <h2 class=" font-bold text-[48px]">Fintech
+                            <span
+                                class=" opacity-0 group-hover:opacity-100 group-hover:translate-y-0 duration-500">→</span>
+                        </h2>
+                        <p
+                            class="text-[24px] font-Schibsted font-normal hidden group-hover:block group-hover:translate-y-0 duration-500">
+                            Connecting people through art, stories, food, and culture</p>
+                    </div>
+                    <div class="faq_img">
+                        <img class="w-[100px]  absolute top-0 right-0 z-40 rotate-6 hidden group-hover:block duration-500 group-hover:rotate-12"
+                            src="https://framerusercontent.com/images/c1IDFOlKiZMtWILMJUcX8Sgfw.png" alt="">
+                    </div>
+                </div>
+                <div class="FAQ flex justify-between items-center group duration-500 relative transition-all py-[38px]">
+                    <div class="faq_text">
+                        <h2 class=" font-bold text-[48px]">Healthcare <span
+                                class=" opacity-0 group-hover:opacity-100 group-hover:translate-y-0 duration-500">→</span>
+                        </h2>
+                        <p
+                            class="text-[24px] font-Schibsted font-normal hidden group-hover:block group-hover:translate-y-0 duration-500">
+                            Connecting people through art, stories, food, and culture</p>
+                    </div>
+                    <div class="faq_img">
+                        <img class="w-[100px]  absolute top-0 right-0 z-40 rotate-6 hidden group-hover:block duration-500 group-hover:rotate-12"
+                            src="https://framerusercontent.com/images/c1IDFOlKiZMtWILMJUcX8Sgfw.png" alt="">
+                    </div>
+                </div>
+                <div class="FAQ flex justify-between items-center group duration-500 relative transition-all py-[38px]">
+                    <div class="faq_text">
+                        <h2 class="font-bold text-[48px]">Media<span
+                                class=" opacity-0 group-hover:opacity-100 group-hover:translate-y-0 duration-500">→</span>
+                        </h2>
+                        <p
+                            class="text-[24px] font-Schibsted font-normal hidden group-hover:block group-hover:translate-y-0 duration-500">
+                            Connecting people through art, stories, food, and culture</p>
+                    </div>
+                    <div class="faq_img">
+                        <img class="w-[100px]  absolute top-0 right-0 z-40 rotate-6 hidden group-hover:block duration-500 group-hover:rotate-12"
+                            src="https://framerusercontent.com/images/c1IDFOlKiZMtWILMJUcX8Sgfw.png" alt="">
+                    </div>
+                </div>
+                <div class="FAQ flex justify-between items-center group duration-500 relative transition-all py-[38px]">
+                    <div class="faq_text">
+                        <h2 class="font-bold text-[48px]">Startup<span
+                                class=" opacity-0 group-hover:opacity-100 group-hover:translate-y-0 duration-500">→</span>
+                        </h2>
+                        <p
+                            class="text-[24px] font-Schibsted font-normal hidden group-hover:block group-hover:translate-y-0 duration-500">
+                            Connecting people through art, stories, food, and culture</p>
+                    </div>
+                    <div class="faq_img">
+                        <img class="w-[100px]  absolute top-0 right-0 z-40 rotate-6 hidden group-hover:block duration-500 group-hover:rotate-12"
+                            src="https://framerusercontent.com/images/c1IDFOlKiZMtWILMJUcX8Sgfw.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Ending_FAQ_section -->
+    <!-- start_Projects_section -->
+    <section class=" relative z-10" data-aos="fade-up"data-aos-duration="1500">
+        <div class="project w-[1100px] border-t-2 border-black mx-auto ">
+            <div class="pojict_text">
+                <p class="font-lora italic font-medium text-[24px] pt-[34px] ml-[64px]">Projects</p>
+                <h2 class="font-bold text-[64px] ml-[64px]">Selected works</h2>
+                <p class="text-[24px]  font-normal ml-[64px]">Years of experience to create unique design in agile and fast manner
+                </p>
+                <img class="w-[1000px] pt-10"
+                    src="https://framerusercontent.com/images/ASS7dnAsP0byXteUM9M7KYPgJE0.jpg?scale-down-to=512" alt="">
+                <h4 class="pt-3 text-[32px] font-bold hover:underline">The Nature</h4>
+                <p class="pb-4 text-[24px] font-normal mb-2">Pushing creative boundaries and technologies, you've come
+                    to the right place</p>
+            </div>
+            <div class="project_but pb-10">
+                <button class="main_but">3D Design</button>
+                <button class="main_but">Marketing</button>
+                <button class="main_but">Social Media</button>
+                <button class="main_but">video & web</button>
+                <button class="main_but">photo</button>
+            </div>
+        </div>
+    </section>
+    <!-- eading_Projects_section -->
+    <!-- start_projects_second-section -->
+    <section class=" relative z-10">
+        <div class="second_projects  w-[1100px] mx-auto mb-11">
+            <div class="tow_projiecs_section flex justify-between items-center gap-4">
+                <div class="project">
+                    <div class="pojict_text">
+                        <img class=""
+                            src="https://framerusercontent.com/images/zYsu0RmIoAFJEsDVG1LJnbHd2Kw.jpg?scale-down-to=512"
+                            alt="">
+                        <h4 class="pt-3 text-[32px] font-bold hover:underline">Countertouch </h4>
+                        <p class="pb-4 text-[24px] font-normal mb-2">Years of experience to create unique design in
+                            agile and fast manner</p>
+                    </div>
+                    <div class="project_but pb-10">
+                        <button class="main_but">Branding</button>
+                        <button class="main_but">Design</button>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="pojict_text">
+                        <img class=""
+                            src="https://framerusercontent.com/images/RZA4Z6XBaWvAk0auyovOFvHeO4.jpg?scale-down-to=512"
+                            alt="">
+                        <h4 class="pt-3 text-[32px] font-bold hover:underline">Bizantine</h4>
+                        <p class="pb-4 text-[24px] font-normal mb-2">This way, we can cut out all the project management
+                            and focus just on the design processes</p>
+                    </div>
+                    <div class="project_but pb-10">
+                        <button class="main_but">video & web</button>
+                        <button class="main_but">Strategy</button>
+                        <button class="main_but">Design</button>
+                    </div>
+                </div>
+            </div>
+            <a
+                class="font-bold p-3 text-center text-[20px] shadow  border-black border-2 rounded-full block hover:bg-black duration-500 hover:text-white group pl-7">See
+                all articles
+                <svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"class="size-0 group-hover:size-6 duration-500"
+                    color="var(--token-04a3f1b0-e024-4c12-967c-3112bcf4a142, rgb(255, 255, 255)) /* {&quot;name&quot;:&quot;Light / White&quot;} */"
+                    style="user-select: none; width:30px; height: 100%; display: inline-block; fill: var(--token-04a3f1b0-e024-4c12-967c-3112bcf4a142, rgb(255, 255, 255)); flex-shrink: 0;">
+                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                        ></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- ending_projects_second-section -->
+    <!-- starding_testimonials_section -->
+
+    <!-- Component: Testimonial slider -->
+    <section class="relative z-10"  data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom">
+        <div class=" w-[1100px] glide-08 mx-auto border-t-2 border-black">
+            <p class="font-lora italic font-medium text-[24px] pt-[34px] ml-[64px]">Testimonials</p>
+            <h2 class=" font-bold text-[64px] ml-[64px] mb-[15px]">Clients about us</h2>
+            <!-- Slides -->
+            <div class="overflow-hidden text-center bg-white  text-black relative" data-glide-el="track">
+                <ul
+                    class="relative w-[1100px] overflow-hidden p-0 whitespace-no-wrap flex flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform]">
+                    <li>
+                        <div class="w-[1100px] mx-auto">
+                            <!-- Start Testimonial -->
+                            <div class="overflow-hidden ">
+                                <div class="">
+                                    <figure class="">
+                                        <blockquote class="text-lg  lg:text-xl ">
+                                            <p class="text-[48px] leading-12 text-left font-bold">“Genuinely, your great design has  helped us in 100 places. Was one of the best investments we made.”</p>
+                                        </blockquote>
+                                        <figcaption class="flex flex-col items-start gap-2 p-6 text-sm">
+                                            <div class="flex items-center gap-4 pt-4 text-sm text-left ">
+                                                <img src="https://i.pravatar.cc/40?img=11" alt="user name" title="user name"
+                                                    width="48" height="48" class="max-w-full rounded-full shrink-0" />
+                                                <div class="flex flex-col gap-1">
+                                                    <span class="font-bold text-[24px] leading-8">Bill Gates</span>
+                                                    <cite class="not-italic text-[20px] font-normal leading-7"><a href="#">CEO, Microsoft</a></cite>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <!-- End Testimonial -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="w-[1100px] mx-auto">
+                            <!-- Start Testimonial -->
+                            <div class="overflow-hidden">
+                                <div class="">
+                                    <figure class="">
+                                        <blockquote class="text-lg lg:text-xl ">
+                                            <p class="text-[48px] leading-12 text-left font-bold">
+                                                “Working with The Bureau was an amazing experience. We have built an amazing brand together and look forward to working on more exciting projects with you all.”</p>
+                                        </blockquote>
+                                        <figcaption class="items-start gap-2 p-6 text-sm ">
+                                            <div class="flex items-center gap-4 pt-4 text-sm text-left ">
+                                                <img src="https://framerusercontent.com/images/r8iSYGohtXaJWZv6pxoOcKb4s.png"
+                                                    alt="user name" title="user name" width="48" height="48"
+                                                    class="max-w-full rounded-full shrink-0" />
+                                                <div class="flex flex-col gap-1">
+                                                    <span class="font-bold text-[24px] leading-8">Jane Smith</span>
+                                                    <cite class="not-italic text-[20px] font-normal leading-7"><a href="#">Co-Founder at InBeats</a></cite>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+    
+                                </div>
+                            </div>
+                            <!-- End Testimonial -->
+                        </div>
+                    </li>
+                    <li>
+                        <div class="w-[1100px] mx-auto">
+                            <!-- Start Testimonial -->
+                            <div class="overflow-hidden">
+                                <div class="relative p-6">
+                                    <figure class="">
+                                        <blockquote class="p-6 text-lg lg:text-xl">
+                                            <p class="text-[48px] leading-12 text-left font-bold">“The Bureau impressive expertise and strategy advisory were crucial to achieving our goals. The experience was great in all dimensions.”</p>
+                                        </blockquote>
+                                        <figcaption class="items-start p-6 text-sm ">
+                                            <div class="flex items-center gap-4 pt-4 text-sm text-left">
+                                                <img src="https://i.pravatar.cc/40?img=7" alt="user name" title="user name"
+                                                    width="48" height="48" class="max-w-full rounded-full shrink-0" />
+                                                <div class="flex flex-col gap-1">
+                                                    <span class="font-bold text-[24px] leading-8">Arnold Jones</span>
+                                                    <cite class="not-italic text-[20px] font-normal leading-7"><a href="#">Software Engineer</a></cite>
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <!-- End Testimonial -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Controls -->
+           <div class="absolute left-0 flex items-center justify-between w-full h-0 px-4 top-1/2 " data-glide-el="controls">
+                <button class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-white border-slate-700 hover:border-slate-900 focus-visible:outline-none bg-black" data-glide-dir="<" aria-label="prev slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+
+                </button>
+                <button class="inline-flex items-center justify-center w-8 h-8 transition duration-300 border rounded-full lg:w-12 lg:h-12 text-white border-slate-700 hover:border-slate-900 focus-visible:outline-none bg-black" data-glide-dir=">" aria-label="next slide">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <!-- endding_testimonials_section -->
+
+  <!-- start_career_section -->
+  <section class="w-[1100px] mx-auto border-t-2 border-black relative z-10 "data-aos="fade-up">
+    <div class="all_career_section w-[1000px] pb-8 ml-[64px]">
+        <p class="font-lora italic font-medium text-[24px] mt-[34px] ">Career</p>
+        <h2 class=" font-bold text-[64px] ">What we do</h2>
+        <p class="text-[24px] font-normal pb-10">This way, we can cut out all the project management and focus just
+            on the design processes.</p>
+        <div class="ALL_career  mx-auto pt-12">
+            <div class="career items-center group duration-500 relative transition-all ">
+                <div id="flip" class="career_text">
+                    <h2 class=" font-bold text-[48px] mb-[56px]" >WebGL Developer<span
+                            class=" opacity-0 group-hover:opacity-100 group-hover:translate-y-0 duration-500"> ↓</span>
+                    </h2>
+                </div>
+                <div id="panel" class="hidden text-[20] font-normal">
+                  <div class="tow_p_stn flex  justify-between gap-2">
+                    <p class="career_paragrap w-[790px]">We are is looking for a Front-end developer with an in-depth knowledge of React.js and an affinity for the creative side of development. We are looking for someone who will be able to develop and maintain creative websites, contribute to internal projects and planning discussions, develop reusable code and libraries for future use, document code and collaborate with the UI/UX Designers, in order to improve the final product.</p> 
+                    <div class="sidebar">
+                        <p class="career_paragrap w-[300px]">
+                            Job Status: Full time <br>
+                            Experience: 4 years  <br>
+                            Location: Palo Alto, CA      
+                       </p>
+                       <a class="rounded-full  text-[16px] font-bold px-5 py-2.5 text-white shadow border-2 border-black bg-black  duration-500 flex gap-3 items-center  group"
+                       href="#">
+                       Apply now
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-0 group-hover:size-6 duration-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                      </svg>
+                   </a>
+                    </div>
+                  </div><br> 
+                   <ul class="fast_list">
+                    <li class="career_paragrap"><a href="#">Minimum 4 years experience in creative development</a></li>
+
+                    <li class="career_paragrap"><a href="#"> Minimum 2 years experience with React.js</a></li>
+                    <li class="career_paragrap"><a href="#">Excellent knowledge of modern HTML, CSS, and Javascript (ES6)</a></li>
+                    <li class="career_paragrap"><a href="#">Good knowledge of animation libraries (ex: GSAP) & build tools (Node.js, Webpack)</a></li>
+                    <li class="career_paragrap"><a href="#">Basic knowledge of Git, and popular CMS platforms</a></li>
+                    <li class="career_paragrap"><a href="#">Bonus: WebGL, Canvas, CSS-in-JS, GraphQL, SSR/SSG</a></li>
+
+                   </ul>
+                </div>
+            </div>
+            <div class="career items-center group duration-500 relative transition-all ">
+                <div id="to"class="career_text">
+                    <h2 class=" font-bold text-[48px] mb-[56px]" >Front-End Developer<span
+                            class=" opacity-0 group-hover:opacity-100 group-hover:translate-y-0 duration-500"> ↓</span>
+                    </h2>
+                </div>
+                <div id="tog" class="hidden text-[20] font-normal">
+                  <div class="tow_p_stn flex  justify-between gap-2">
+                    <p class="career_paragrap w-[790px]">We are is looking for a Front-end developer with an in-depth knowledge of React.js and an affinity for the creative side of development. We are looking for someone who will be able to develop and maintain creative websites, contribute to internal projects and planning discussions, develop reusable code and libraries for future use, document code and collaborate with the UI/UX Designers, in order to improve the final product.</p> 
+                    <div class="sidebar">
+                        <p class="career_paragrap w-[300px]">
+                            Job Status: Full time <br>
+                            Experience: 4 years  <br>
+                            Location: Palo Alto, CA      
+                       </p>
+                       <a class="rounded-full  text-[16px] font-bold px-5 py-2.5 text-white shadow border-2 border-black bg-black  duration-500 flex gap-3 items-center  group"
+                       href="#">
+                       Apply now
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-0 group-hover:size-6 duration-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                      </svg>
+                   </a>
+                    </div>
+                  </div><br> 
+                   <ul class="fast_list">
+                    <li class="career_paragrap"><a href="#">Minimum 4 years experience in creative development</a></li>
+
+                    <li class="career_paragrap"><a href="#"> Minimum 2 years experience with React.js</a></li>
+                    <li class="career_paragrap"><a href="#">Excellent knowledge of modern HTML, CSS, and Javascript (ES6)</a></li>
+                    <li class="career_paragrap"><a href="#">Good knowledge of animation libraries (ex: GSAP) & build tools (Node.js, Webpack)</a></li>
+                    <li class="career_paragrap"><a href="#">Basic knowledge of Git, and popular CMS platforms</a></li>
+                    <li class="career_paragrap"><a href="#">Bonus: WebGL, Canvas, CSS-in-JS, GraphQL, SSR/SSG</a></li>
+
+                   </ul>
+                </div>
+            </div>  
+            <div class="career items-center group duration-500 relative transition-all">
+                <div id="tor"class="career_text">
+                    <h2 class=" font-bold text-[48px] mb-[56px]" >UI/UX Designer<span
+                            class=" opacity-0 group-hover:opacity-100 group-hover:translate-y-0 duration-500"> ↓</span>
+                    </h2>
+                </div>
+                <div id="togg" class="hidden text-[20] font-normal">
+                  <div class="tow_p_stn flex  justify-between gap-2">
+                    <p class="career_paragrap w-[790px]">We are is looking for a Front-end developer with an in-depth knowledge of React.js and an affinity for the creative side of development. We are looking for someone who will be able to develop and maintain creative websites, contribute to internal projects and planning discussions, develop reusable code and libraries for future use, document code and collaborate with the UI/UX Designers, in order to improve the final product.</p> 
+                    <div class="sidebar">
+                        <p class="career_paragrap w-[300px]">
+                            Job Status: Full time <br>
+                            Experience: 4 years  <br>
+                            Location: Palo Alto, CA      
+                       </p>
+                       <a class="rounded-full  text-[16px] font-bold px-5 py-2.5 text-white shadow border-2 border-black bg-black  duration-500 flex gap-3 items-center  group"
+                       href="#">
+                       Apply now
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-0 group-hover:size-6 duration-500">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                      </svg>
+                   </a>
+                    </div>
+                  </div><br> 
+                   <ul class="fast_list">
+                    <li class="career_paragrap"><a href="#">Minimum 4 years experience in creative development</a></li>
+
+                    <li class="career_paragrap"><a href="#"> Minimum 2 years experience with React.js</a></li>
+                    <li class="career_paragrap"><a href="#">Excellent knowledge of modern HTML, CSS, and Javascript (ES6)</a></li>
+                    <li class="career_paragrap"><a href="#">Good knowledge of animation libraries (ex: GSAP) & build tools (Node.js, Webpack)</a></li>
+                    <li class="career_paragrap"><a href="#">Basic knowledge of Git, and popular CMS platforms</a></li>
+                    <li class="career_paragrap"><a href="#">Bonus: WebGL, Canvas, CSS-in-JS, GraphQL, SSR/SSG</a></li>
+
+                   </ul>
+                </div>
+            </div>  
+        </div>
+    </div>
+</section>
+  <!-- eanding_career_section -->
+  <!-- start_countdown_section -->
+  <section>
+         <div class="all_countdown flex justify-between items-center w-[1100px] mx-auto relative z-10 my-[71px] ">
+                <div class="coun_1 ">
+                    <h2 class="font-bold text-[64px]">6</h2>
+                    <p  class="text-[24px] font-normal">years</p>
+                </div>
+                <div class="coun_2 ">
+                    <h2 class="font-bold text-[64px]">85</h2>
+                    <p  class="text-[24px] font-normal">clients</p>
+                </div>
+                <div class="coun_3 ">
+                    <h2 class="font-bold text-[64px]">359</h2>
+                    <p  class="text-[24px] font-normal">projects</p>
+                </div>
+                <div class="coun_4">
+                    <h2 class="font-bold text-[64px]">7</h2>
+                    <p class="text-[24px] font-normal">awards</p>
+                </div>
+         </div>
+  </section>
+  <!-- ending_countdown_section -->
+<!-- starting_blog_section -->
+<section>
+    <div class="all_blog_section w-[1100px] mx-auto relative z-10 border-t-2 border-black">
+        <p class="font-lora italic font-medium text-[24px] mt-[34px] ml-[64px]">Blog</p>
+        <h2 class=" font-bold text-[64px] ml-[64px]">Latest articles</h2>
+        <div class="blog_section flex justify-between items-center gap-4">
+                <div class="single_blog">
+                    <img class="w-[369px] h-[320px]" src="https://framerusercontent.com/images/lXvNACXPAgKDNRtPZ84B6GGpjw.png" alt="">
+                    <p class="text-[16px] font-normal">May 20, 2023</p>
+                    <h2 class="text-[28px] font-bold hover:underline">How to Solve Issues With Design Web</h2>
+                    <p class="text-[20px] font-normal">Used by these companies to maximize their online presence and reach their goals</p>
+                </div>
+                <div class="single_blog_tow py-2">
+                    <img class="w-[369px] h-[320px]" src="https://framerusercontent.com/images/iojqvh6KFHe4pi4FLeXrlUeqig.png" alt="">
+                    <p class="text-[16px] font-normal">May 20, 2023</p>
+                    <h2 class="text-[28px] font-bold hover:underline">How to Solve Issues With Design Web</h2>
+                    <p class="text-[20px] font-normal">Used by these companies to maximize their online presence and reach their goals</p>
+                </div>
+                <div class="single_blog_three ">
+                    <img class="w-[369px] h-[320px]" src="https://framerusercontent.com/images/Veeh5aMDG6xdpf4zPeqcgRqGSg.png" alt="">
+                    <p class="text-[16px] font-normal">May 20, 2023</p>
+                    <h2 class="text-[28px] font-bold hover:underline">How to Solve Issues With Design Web</h2>
+                    <p class="text-[20px] font-normal">Used by these companies to maximize their online presence and reach their goals</p>
+                </div>
+                
+        </div>
+        <a
+        class="font-bold p-3 text-center text-[20px] shadow  border-black border-2 rounded-full block hover:bg-black duration-500 hover:text-white group pl-7 my-8 mt-[48px]">See
+        all articles
+        <svg xmlns="http://www.w3.org/2000/svg" focusable="false" viewBox="0 0 24 24"class="size-0 group-hover:size-6 duration-500"
+            color="var(--token-04a3f1b0-e024-4c12-967c-3112bcf4a142, rgb(255, 255, 255)) /* {&quot;name&quot;:&quot;Light / White&quot;} */"
+            style="user-select: none; width:30px; height: 100%; display: inline-block; fill: var(--token-04a3f1b0-e024-4c12-967c-3112bcf4a142, rgb(255, 255, 255)); flex-shrink: 0;">
+            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                ></path>
+        </svg>
+    </a>
+    </div>
+</section>
+<!-- endinging_blog_section -->
+<!--starting_footrt_section? -->
+<footer>
+        <div class="all_footer w-[1100px] mx-auto relative z-10 border-t-2 border-black">
+            <div class="foot_1 ml-[64px]">
+                <p class="font-lora italic font-medium text-[24px] mt-[34px]">Contacts</p>
+                <h2 class=" font-bold text-[64px]">Work with us</h2>
+                <p class="text-[24px] font-normal pb-10">We are eager to learn about your organization and to help you achieve a well-defined out-of-the-box visual strategy.</p>
+                <p class="text-[24px] font-normal">You can contact us at:</p>
+                <h1 class="text-[48px] font-bold">info@pixsellz.io</h1>
+                <a class="rounded-full text-[16px] font-bold px-5 py-2.5 text-black shadow border-2 border-black hover:bg-black pl-7 duration-500 hover:text-white flex gap-3 items-center  group w-9"
+                href="#">
+                Contacts
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="size-0 group-hover:size-6 duration-500">
+                    <path fill-rule="evenodd"
+                        d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM2.25 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM6.31 15.117A6.745 6.745 0 0 1 12 12a6.745 6.745 0 0 1 6.709 7.498.75.75 0 0 1-.372.568A12.696 12.696 0 0 1 12 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 0 1-.372-.568 6.787 6.787 0 0 1 1.019-4.38Z"
+                        clip-rule="evenodd" />
+                    <path
+                        d="M5.082 14.254a8.287 8.287 0 0 0-1.308 5.135 9.687 9.687 0 0 1-1.764-.44l-.115-.04a.563.563 0 0 1-.373-.487l-.01-.121a3.75 3.75 0 0 1 3.57-4.047ZM20.226 19.389a8.287 8.287 0 0 0-1.308-5.135 3.75 3.75 0 0 1 3.57 4.047l-.01.121a.563.563 0 0 1-.373.486l-.115.04c-.567.2-1.156.349-1.764.441Z" />
+                </svg>
+            </a>
+            </div>
+            <div class="foot_2 flex justify-between items-center mb-[100px mt-[80px] ml-[64px]">
+               <div>
+                <p class="text-[24px] font-normal mb-[12px]">Based in</p>
+                <h2 class="text-[32px] font-bold">★ Palo Alto, CA</h2>
+                <h4 class="text-[24px] font-normal">250 Hamilton Avenue <br>
+                     Palo Alto, CA 94301</h4>
+                <h4 class="text-[24px] font-normal mt-[12px]">(201) 555-0124</h4>
+               </div>
+                <div>
+                    <p class="text-[24px] font-normal mb-[12px]">Our socials</p>
+                    <h2 class="text-[32px] font-bold hover:underline">Instagram</h2>
+                    <h2 class="text-[32px] font-bold hover:underline">Dribbble</h2>
+                    <h2 class="text-[32px] font-bold hover:underline">Twitter</h2>
+                </div>
+                <div class="logo flex justify-between  my-8">
+                    <p class="font-bold font-Schibsted text-2xl px-2"><span
+                            class="font-bold text-xs italic font-lora">the</span>Bureau</p>
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        id="svg484779330_329">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 0C5.37258 0 0 5.37258 0 12V20C0 26.6274 5.37258 32 12 32H20C26.6274 32 32 26.6274 32 20V12C32 5.37258 26.6274 0 20 0H12ZM13 6C9.13401 6 6 9.13401 6 13H13V6Z"
+                            fill="black" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="foot_3 flex justify-between items-center mt-[37px] mb-[39px]">
+            <div>
+             <p class="text-[16px] font-normal ml-[64px]">© 2018 / 2023 Pixsellz – Design Goodies Team</p>
+            </div>
+             <div class="flex justify-start  gap-4">
+                 <p class="text-[16px] font-normal mr-4">Privacy Policy</p>
+                 <p class="text-[16px] font-normal mr-[10px]">Cookie Policy</p>
+                 <p class="text-[16px] font-normal mr-[10px]" >Framer ↗</p>
+             </div>
+         </div>
+</footer>
+<!--ending_footrt_section? -->
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+    <script src="src/app.js"> </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
